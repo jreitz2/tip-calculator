@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* - Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%) - main bg
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@600&display=swap");
+* {
+  font-family: "Space Mono", monospace;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(185, 41%, 84%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(183, 100%, 15%);
+  padding: 50px 0px;
+  letter-spacing: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 300px;
 }
 
-.card {
-  padding: 2em;
+.bill {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: hsl(183, 100%, 15%);
 }
 
-.read-the-docs {
-  color: #888;
+.tip {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.tip button {
+  background-color: hsl(128, 30%, 47%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tip-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.bill button {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tip-btns button:hover {
+  color: black;
+}
+
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(189, 41%, 97%);
+}
+
+input {
+  border: none;
+  width: 100%;
+  background-color: hsl(180, 41%, 92%);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.tip-number {
+  font-size: 2rem;
+  color: hsl(128, 30%, 47%);
+}
+
+.subtext {
+  font-size: 0.8rem;
+  color: hsl(184, 14%, 56%);
 }
